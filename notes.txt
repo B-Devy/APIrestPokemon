@@ -1,0 +1,67 @@
+node app.js pour lancer le code
+
+main.js existe aussi beaucoup par convention
+npm init pour creer le package.json
+remplir les questionnaire
+
+ds package
+ "scripts": {
+    "start": "node app.js"
+  },
+  commande pour lancer le code
+  sorte de raccourci que l'on lance avec "npm run start"
+
+  npm install express --save    le --save est important pour ajouter aux dependances
+
+install nodemon  , module qui redmarre l'api à chaque save et changement
+npm install nodemon --save-dev    (--save-dev) installe sur une autre dependance visible sur package.json et qui ne s'execute que pendant le developpement.
+!! bien changer le script package.json en "nodemon app.js" dans le start. 
+
+- les pts de terminaison (end points) express:
+pts de term = app.METHODE(CHEMIN, GESTIONNAIRE(req, res))
+
+pts de terminaison dynamimque => utiliser :id/:name/:number etc
+
+
+pour morgan qui est un middleware qui remplace le logger
+npm install morgan --save-dev
+
+Note importante !
+Quelle est la différence entre une String et un json
+const userString = '{"name": "John", "age": 33}'       console.log(userJSON.age)
+const userJSON = {"name": "John", "age": 33}           console.log(userString.age)
+
+installer le Middleware body parser
+npm install body-parser --save
+
+installer sequelize
+npm install sequelize --save
+
+un model est un objet JSON lié à une table que l'on peut paramètré
+npm start is the short form for npm run start 
+
+c'est status() et pas statut()   à signaler, c'est innadmissible !
+
+JWT ou JSON Web Token est une véritable clef cryptée avec durée limitée qui se présente sous forme de "String". s'utilise pour demander des données protegées au server
+
+Bon avant que les élèves qui suivront n'attrape une méningite, voilà ma solution au problème de test avec Insomnia du login AVEC token JWT
+
+
+1 Créer une nouvelle requête sur Insomnia. Placer sur POST, entrer l'adresse suivante : « http://localhost:3000/api/login ». Puis dans l'onglet Body, appuyez sur la toute petite flèche de déroulement et selectionner JSON. Entrer l'objet suivant : {"username": "pikachu", "password": "pikachu" } Rien dans les autres champs !
+
+
+2 Envoyez le tout. Insomnia devrait renvoyer un JSON avec la propriété « token » quelquepart. Copiez-là sans les guillemets
+
+
+3 DANS LA MEME REQUETE !!!!! N'EN CREEZ PAS UNE NOUVELLE !
+
+Changer le POST en GET et placer l'adresse « http://localhost:3000/api/pokemons »
+
+
+4 Enlever les informations dans tout les champs pour ne garder que l'onglet « Headers ».
+
+remplissez le premier champs avec « Authorization ».
+
+Le second avec « Bearer $2b$10$YYad40jLnWR5vkdfzCO6Akpgnkn5VMoT9rfjzIXHA/Ujnp7hAe »
+
+Entendons par là : Bearer , espace , votre jeton/token JWT
