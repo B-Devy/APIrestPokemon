@@ -70,5 +70,13 @@ Entendons par là : Bearer , espace , votre jeton/token JWT
 ---- le calvaire HEROKU 
 On n'utilise plus "master", mais "main
 bien mettre un point à .gitignore
+installer :   npm install -g win-node-env     les variables du cours ne marchent pas tel quel, car nous ne sommes pas sous mac ou linux
+
 installer Heroku CLI
 executer heroku login
+
+git init , add . , commit Puis
+heroku create
+git push heroku main
+heroku open
+
