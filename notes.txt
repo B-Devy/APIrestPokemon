@@ -65,3 +65,10 @@ remplissez le premier champs avec « Authorization ».
 Le second avec « Bearer $2b$10$YYad40jLnWR5vkdfzCO6Akpgnkn5VMoT9rfjzIXHA/Ujnp7hAe »
 
 Entendons par là : Bearer , espace , votre jeton/token JWT
+
+
+---- le calvaire HEROKU 
+On n'utilise plus "master", mais "main
+bien mettre un point à .gitignore
+installer Heroku CLI
+executer heroku login
