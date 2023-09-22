@@ -2,12 +2,14 @@ const express = require('express')  //va chercher depence express dans node modu
 const favicon = require('serve-favicon')
 const bodyParser = require('body-parser')
 const sequelize = require('./src/db/sequelize')
+const morgan = require('morgan')
 
 const app = express()   // création d'une instance express
 const port = process.env.PORT || 3000  // pour que l'appli demarre aussi bien en localhost que sur heroku
 
 app
     .use(favicon(__dirname + '/favicon.ico'))
+    .use(morgan('dev'))
     .use(bodyParser.json())
 
 sequelize.initDb()
@@ -77,4 +79,4 @@ app.delete('/api/pokemons/:id', (req, res) => {
     res.json(success(message, pokemonDeleted))
 })
 */
-app.listen(port, () => console.log(`Notre appli Node est démarée sur: http://localhost:${port}`))   
+app.listen(port, () => console.log(`Notre appli Node est démarée sur: http://localhost:${port} ${__dirname}`))   
