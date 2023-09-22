@@ -90,6 +90,6 @@ heroku selon codingsrc
 install, heroku pour les commandes, heroku login, git init, heroku git:remote -a obscure-temple-58009
 dans .gitignore
 .env
-/node_modules
+/node_modules   
 puis commande: git push heroku master     ou main
 heroku open
