@@ -88,6 +88,9 @@ puis commande: git push heroku master     ou main
 heroku open
 
 
+git remote -v pour connaitre le repertoire actuel
+
+
 ce sont des objets globaux
 process.env
 require
